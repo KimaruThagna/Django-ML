@@ -25,3 +25,10 @@ tests = [vectorizer.transform(["fine"]), vectorizer.transform(["aki you"])]
 for item in tests:
     print(f'Prediction1{classifier_1.predict(item)}')
     print(f'Prediction2{classifier_2.predict(item)}')
+# save model as pickle
+pickle_obj = {
+    'vectorizer': vectorizer,
+    'regressor': classifier_2,
+    'logistic': classifier_1
+}
+pickle.dump( pickle_obj, open( 'pickled_models' + ".p", "wb" ) )
