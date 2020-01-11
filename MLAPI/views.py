@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+from .apps import MlapiConfig
+from django.http import JsonResponse
+from rest_framework.views import APIView
 # Create your views here.
 
 '''
@@ -12,3 +14,18 @@ https://towardsdatascience.com/predicting-airbnb-prices-with-machine-learning-an
 https://link.medium.com/q5vnU2d962
 https://link.medium.com/zX4Bnsb962
 '''
+
+
+class she_mad_model(APIView):
+    def get(self, request):
+        if request.method == 'GET':
+            # get statement from boo
+            statment = request.GET.get('statement')
+            # vectorize statement
+            vector = MlapiConfig.vectorizer.transform([statment])
+            # predict based on vector
+            prediction = MlapiConfig.regressor.predict(vector)[0]
+            # build response
+            response = {'is she mad?': prediction}
+            # return response
+            return JsonResponse(response)
