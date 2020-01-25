@@ -14,6 +14,7 @@ df = pd.DataFrame([
                     ["Helena",24],
                     ], dtype='category')
 
-
-imp = SimpleImputer(strategy="most_frequent")
+# univariate imputation
+imp = SimpleImputer(strategy="most_frequent") # could be most_frequent, least_frequent, constant_value, mean, median
 print(imp.fit_transform(df))
+# multivariate imputation
