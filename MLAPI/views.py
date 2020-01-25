@@ -5,9 +5,8 @@ from rest_framework.views import APIView
 # Create your views here.
 
 '''
-https://towardsdatascience.com/productionize-a-machine-learning-model-with-a-django-api-c774cb47698c
-https://www.kaggle.com/cedriclacrambe/keras-gpt-2-text-generation-tests
 https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/
+https://www.kaggle.com/cedriclacrambe/keras-gpt-2-text-generation-tests
 https://www.freecodecamp.org/news/how-to-apply-reinforcement-learning-to-real-life-planning-problems-90f8fa3dc0c5/
 https://towardsdatascience.com/predicting-airbnb-prices-with-machine-learning-and-location-data-5c1e033d0a5a
 https://towardsdatascience.com/predicting-airbnb-prices-with-machine-learning-and-deep-learning-f46d44afb8a6
@@ -26,6 +25,6 @@ class she_mad_model(APIView):
             # predict based on vector
             prediction = MlapiConfig.regressor.predict(vector)[0]
             # build response
-            response = {'is she mad?': prediction}
+            response = {'is she mad?': str(prediction)}
             # return response
             return JsonResponse(response)
