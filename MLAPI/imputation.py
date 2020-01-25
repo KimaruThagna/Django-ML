@@ -8,8 +8,12 @@ df = pd.DataFrame([
                     ["Alice",np.nan ],
                     ["Jane",20],
                     ["liam",19],
-                    ["Jimmy",20],
+                    ["Sue",20],
                     ["Jane",20],
                     ["Jimmy",np.nan],
                     ["Helena",24],
                     ], dtype='category')
+
+
+imp = SimpleImputer(strategy="most_frequent")
+print(imp.fit_transform(df))
