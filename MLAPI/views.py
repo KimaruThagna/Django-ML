@@ -12,6 +12,7 @@ https://towardsdatascience.com/predicting-airbnb-prices-with-machine-learning-an
 https://towardsdatascience.com/predicting-airbnb-prices-with-machine-learning-and-deep-learning-f46d44afb8a6
 https://link.medium.com/q5vnU2d962
 https://link.medium.com/zX4Bnsb962
+https://medium.com/better-programming/a-gentle-introduction-to-using-scrapy-to-crawl-airbnb-listings-58c6cf9f9808
 '''
 
 
